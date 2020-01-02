@@ -7,7 +7,6 @@ import org.smart4j.chapter2.helper.DatabaseHelper;
 import org.smart4j.chapter2.model.Customer;
 import org.smart4j.chapter2.service.CustomerService;
 
-import java.io.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +24,7 @@ public class CustomerServiceTest {
     }
 
     @Before
-    public void init() throws IOException {
+    public void init() throws Exception {
         DatabaseHelper.executeSqlFile("sql/customer_init.sql");
     }
 
