@@ -69,7 +69,7 @@ public final class DatabaseHelper {
 
     public static <T> List<T> queryEntityList(Class<T> entityClass, Connection conn, String sql, Object... params) {
         List<T> entityList;
-        
+
         try {
             entityList = QUERY_RUNNER.query(conn,sql,new BeanListHandler<T>(entityClass), params);
         } catch (SQLException e) {
